@@ -153,30 +153,50 @@
             border-color: #38BDF8;
             box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
         }
-       
-
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Active navigation link styling */
+        .nav-link.active {
+            color: #38BDF8 !important;
+        }
     </style>
 </head>
 <body class="bg-custom-bg text-custom-text font-['Inter'] min-h-screen p-8 md:p-16 leading-relaxed">
     <main class="max-w-6xl mx-auto">
         <!-- Header Section -->
         <header class="mb-20">
-            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight ">Hello, I'm<br>Umar Farooq Khan.</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                Hello, I'm<br>Umar Farooq Khan
+                <img style="height: 70px; width: 70px;" src="https://cdn.countryflags.com/thumbs/ireland/flag-waving-250.png" alt="Irish Flag" class="inline w-6 h-6 ml-2 align-middle">
+            </h1>
+            
             <p class="text-custom-text text-lg max-w-2xl leading-relaxed opacity-90">
                 I'm a Machine Learning Engineer specializing in LLMs, RAG, and AI Systems. I focus on developing innovative solutions using cutting-edge AI technologies, with a particular emphasis on making AI systems more efficient and sustainable.
             </p>
+        
+            <div class="flex items-center space-x-6 mt-6">
+                <a href="https://github.com/umar-farooq-khan" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub Profile↗</a>
+                <a href="https://www.linkedin.com/in/umar-farooq-khan/" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn Profile↗</a>
+                <a href="mailto:youremail@example.com" class="link-hover text-sm text-custom-highlight">Email↗</a>
+            </div>
         </header>
+        
+
 
         <!-- Navigation -->
         <nav class="mb-20">
             <ul class="flex space-x-12 text-sm text-custom-gray">
-                <li class="link-hover cursor-pointer">01 — PERSONAL PROJECT</li>
-                <li class="link-hover cursor-pointer">02 — THESIS</li>
-                <li class="link-hover cursor-pointer">03 — HALL OF FAME</li>
-                <li class="link-hover cursor-pointer">04 — MASTERS PROJECTS</li>
+                <li><a href="#personal-projects" class="link-hover cursor-pointer">01 — PERSONAL PROJECT</a></li>
+                <li><a href="#thesis" class="link-hover cursor-pointer">02 — THESIS</a></li>
+                <li><a href="#hall-of-fame" class="link-hover cursor-pointer">03 — HALL OF FAME</a></li>
+                <li><a href="#masters-projects" class="link-hover cursor-pointer">04 — MASTERS PROJECTS</a></li>
             </ul>
         </nav>
-        <div class="mb-20">
+        <div class="mb-20" id="personal-projects">
             <h2 class="text-3xl font-semibold mb-10 gradient-text">Personal Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Khushhaal Kisaan -->
@@ -185,12 +205,22 @@
                     <h3 class="text-2xl font-semibold mb-6 text-custom-accent">COHERIFY - AI REPHRASING TOOL - works from any website</h3>
                     <div class="text-custom-text text-base space-y-4 opacity-90">
                         <p class="leading-relaxed">Engineered and productionized a Javscript based text rephrasing Chrome extension using
-                            Node.js, and LLM APIs; reduced inference cost by 75%, reduced latency by
-                            64%, increased tokens per second (TPS) by 205%, currently serving ~100+ users.</p>
+                            Node.js, and LLM APIs </p>
                     </div>
+                    <br/>
+                    <p class="font-medium text-custom-highlight">What's special:</p>
+                    <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                        <li> ~100+ users </li>
+                        <li>GROWTH WITHOUT MARKETING </li>
+                        <li>Reduced inference cost by 75% in recent update</li>
+                        <li>Increased tokens per second (TPS) by 205%</li>
+                        <li>Reduced latency by 64%</li>
+                        <li>Managed Server cost, keeping it under free tier</li>
+                    </ul>
                     <div class="flex items-center space-x-6 mt-6">
                         <a href="https://chromewebstore.google.com/detail/coherify-improve-your-tex/jfghnihkkbhdllbjighlneenimkakoog" target="_blank" class="link-hover text-sm text-custom-highlight">Chrome Marketplace ↗</a>
                     </div>
+
  
                 </div>
 
@@ -205,6 +235,7 @@
                             <p class="font-medium text-custom-highlight">What's special:</p>
                             <ul class="list-disc pl-4 space-y-2 leading-relaxed">
                                 <li>700+ users </li>
+                                <li>WITHOUT MARKETING - COMPLETE STEALTH MODE</li>
                                 <li>44+ countries</li>
                                 <li>~500+ users on the first day of launching</li>
                                 <li>Managed Server cost, keeping it under free tier</li>
@@ -313,7 +344,7 @@
         </div>
 
         <!-- Thesis Project -->
-        <div class="mb-20">
+        <div class="mb-20" id="thesis">
             <h2 class="text-3xl font-semibold mb-10 gradient-text">Thesis Project</h2>
             <div class="glass-card p-8 rounded-xl">
                 <div class="text-sm text-custom-highlight mb-3 font-medium">RESEARCH</div>
@@ -331,7 +362,7 @@
         </div>
 
         <!-- Hall of Fame Section -->
-        <div class="mb-20">
+        <div class="mb-20" id="hall-of-fame">
             <div class="flex items-center justify-center mb-10">
                 <img src="gold-trophy-icon-transparent-background_161751-2022.avif" alt="Trophy" class="h-10 w-10">
                 <h2 class="text-3xl font-semibold mx-6 gradient-text">HALL OF FAME</h2>
@@ -441,7 +472,7 @@
         </div>
 
         <!-- Masters Projects -->
-        <div class="mb-20">
+        <div class="mb-20" id="masters-projects">
             <h2 class="text-3xl font-semibold mb-10 gradient-text">Masters Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Legal Document Summarization -->
@@ -575,7 +606,7 @@
                     <div class="text-sm text-custom-highlight mb-3 font-medium">NEWS WEBSITE</div>
                     <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Pullser 2020 (News Website)</h3>
                     <div class="text-custom-text text-base space-y-4 opacity-90">
-                        <p class="leading-relaxed">News website using Angular & Nodejs & Javascript. Customized newsfeed using ML and AI algorithms to show related and interest based news.</p>
+                        <p class="leading-relaxed">News aggregator website using Angular & Nodejs & Javascript. Customized newsfeed using ML and AI algorithms to show related and interest based news.</p>
                     </div>
                     <div class="flex items-center space-x-6 mt-6">
                         <a href="https://github.com/umar-farooq-khan/AI-news-aggregtor-website-nodejs-angular" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
@@ -653,6 +684,48 @@
                 closePopup();
             }
         });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Active navigation highlighting
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('div[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Update active nav on scroll
+        window.addEventListener('scroll', updateActiveNav);
+        
+        // Initial call to set active nav
+        updateActiveNav();
     </script>
 </body>
 </html>
