@@ -3,384 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Showcase</title>
-      <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <title>Portfolio Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-bg': '#0F172A',
+                        'custom-card': '#1E293B',
+                        'custom-text': '#C1C2C7',
+                        'custom-gray': '#C1C2C7',
+                        'custom-highlight': '#38BDF8',
+                        'custom-accent': '#FFFFFF'
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 20px rgba(0, 0, 0, 0.2)',
+                        'custom-hover': '0 8px 30px rgba(0, 0, 0, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for better visual effects */
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 60% 40%, #183B6B 0%, #0A1436 70%, #2563EB 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 20, 29, 0.45);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            transition: box-shadow 0.3s, border 0.3s, background 0.3s;
+        }
+        .glass-card:hover {
+            box-shadow: 0 12px 40px 0 rgba(56, 98, 248, 0.18);
+            border: 1.5px solid rgba(56, 139, 248, 0.25);
+            background: rgba(37, 99, 235, 0.10);
+        }
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+            background: none;
+            border: none;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .link-hover {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #38BDF8, #818CF8);
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+        /* Styling for inline links */
+        a {
+            color: #e017ee;
+            text-decoration: underline;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: #e017ee;
+            text-decoration: none;
+        }
+        
+        /* Popup Modal Styles */
+        .popup-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        
+        .popup-content {
+            position: relative;
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s ease;
+        }
+        
+        .popup-close:hover {
+            color: #38BDF8;
+        }
+        
+        .image-gallery {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+            border-color: #38BDF8;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+       
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    .container h1, .container h5, .container p, .container b {
-    color: #CCD8F8;
-
-}
-.card-text {
-font-weight : 250;
-}
-    .btn-outline-light {
-    color: #398B82;
-    }
-
-</style>
+    </style>
 </head>
-<body style="font-family: Inter; background-color: #0A192F; color: #CCD8F8">
-<div class="container " style="color: #CCD8F8 !important;">
-    <h1 class="text-center mb-4 " >Thesis Project</h1>
-    <div class="row" style="background-color: #0A192F; ">
-        <div class="col-1" style="background-color: #0A192F; "></div>
+<body class="bg-custom-bg text-custom-text font-['Inter'] min-h-screen p-8 md:p-16 leading-relaxed">
+    <main class="max-w-6xl mx-auto">
+        <!-- Header Section -->
+        <header class="mb-20">
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight ">Hello, I'm<br>Umar Farooq Khan.</h1>
+            <p class="text-custom-text text-lg max-w-2xl leading-relaxed opacity-90">
+                I'm a Machine Learning Engineer specializing in LLMs, RAG, and AI Systems. I focus on developing innovative solutions using cutting-edge AI technologies, with a particular emphasis on making AI systems more efficient and sustainable.
+            </p>
+        </header>
 
-        <div class="col-10 mx-auto" style="background-color: #0A192F; ">
-    <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-        <div class="card-body border border-primary d-flex flex-column">
-            <h5 class="card-title text-center">Enhancing Patent Search, Retrieval and Comprehension using GraphRAG; A Novel Approach</h5>
-            <p class="card-text justify-content-left align-items-center">This thesis proposes a novel approach to enhance patent search, retrieval, and comprehension by integrating retrieval-augmented generation (RAG) with knowledge graphs, called GraphRAG. Traditional keyword-based and Naive RAG models often miss nuanced information due to limited context handling, affecting search quality for broad queries. GraphRAG addresses these limitations by structuring patent information into knowledge graphs, thus enhancing response accuracy and contextual grounding. Evaluation shows GraphRAG significantly outperforms Naive RAG, especially for complex, global queries, offering potential advancements for patent and legal document analysis.
-</br>
-</br>
-<b>Technologies</b>: Neo4j, FAISS, LangChain, OpenAI LLMs, PyPDF2 <br/>
-<b>Techniques:</b> GraphRAG, Knowledge graph construction, vector-based similarity search, community detection, prompt-based fine-tuning, query-focused summarization
-Skills: Natural Language Processing (NLP), semantic search, data retrieval, graph databases, generative AI</p>
+        <!-- Navigation -->
+        <nav class="mb-20">
+            <ul class="flex space-x-12 text-sm text-custom-gray">
+                <li class="link-hover cursor-pointer">01 — PERSONAL PROJECT</li>
+                <li class="link-hover cursor-pointer">02 — THESIS</li>
+                <li class="link-hover cursor-pointer">03 — HALL OF FAME</li>
+                <li class="link-hover cursor-pointer">04 — MASTERS PROJECTS</li>
+            </ul>
+        </nav>
+        <div class="mb-20">
+            <h2 class="text-3xl font-semibold mb-10 gradient-text">Personal Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Khushhaal Kisaan -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">AI CHROME EXTENSION</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">COHERIFY - AI REPHRASING TOOL - works from any website</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Engineered and productionized a Javscript based text rephrasing Chrome extension using
+                            Node.js, and LLM APIs; reduced inference cost by 75%, reduced latency by
+                            64%, increased tokens per second (TPS) by 205%, currently serving ~100+ users.</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://chromewebstore.google.com/detail/coherify-improve-your-tex/jfghnihkkbhdllbjighlneenimkakoog" target="_blank" class="link-hover text-sm text-custom-highlight">Chrome Marketplace ↗</a>
+                    </div>
+ 
+                </div>
 
-            <div class="row mt-auto">
-                <div class="col-12 d-flex justify-content-center">
-                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259561620379504642/" target="_blank" class="btn btn-outline-light mt-auto">LinkedIn Post</a>
+
+
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">STEALTH</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">React Map App</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">A stealth map-based web app using Javascript, Typescript, Next.js, React, Vite, Node.js
+                          </p>
+                            <p class="font-medium text-custom-highlight">What's special:</p>
+                            <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                                <li>700+ users </li>
+                                <li>44+ countries</li>
+                                <li>~500+ users on the first day of launching</li>
+                                <li>Managed Server cost, keeping it under free tier</li>
+                                <li>Fully optimized Database that stays under free tier</li>
+                                <li>0% downtime & errors</li>
+                            </ul>
+                    </div>
+ 
+                </div>
+                <!-- Nordic Wise -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">STARTUP</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">AI RECRUITING AND JOB PORTAL [Nordic Wise]</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Developed an AI-based engineers outsourcing and job portal website from scratch using Django web framework. Used Gen AI techniques to extract details in resumes and cover letters specifically with LLMs.</p>
+                        <p class="leading-relaxed">Automated the workflow of the standard CV generation process using Python. Deployed the website on Railway, a cloud platform providing a simple and scalable hosting solution for web applications.</p>
+                    </div>
+                    <br/>
+                    <p class="font-medium text-custom-highlight">What's special:</p>
+                    <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                        <li>      OUTPERFORMED LINKEDIN EASY APPLY in terms of time to apply and accuracy of the extraction of key details</li>
+                    
+                    </ul>
+                    <div class="mt-6">
+                        <p class="text-sm text-custom-highlight mb-3 font-medium">Project Screenshots</p>
+                        <div class="image-gallery">
+                            <img src="MAIN PAGE.png" 
+                            class="gallery-image" 
+                            onclick="openPopup(this.src, 'Khushhaal Kisaan - Dashboard')">
+                            <img src="image_original.JPG" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Dashboard')">
+                            <img src="APPLICATION PAGE.JPG" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Product Listing')">
+                            <img src="CAREERS.JPG" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Mobile App')">
+   
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+ 
+
+
+
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">STEALTH</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">ISLAMIC PRODUCTIVITY TOOL</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Developing a novel Islamic productivity tool that involves a complex algorithm development</p>
+                    </div>
+                    <br/>
+                    <p class="font-medium text-custom-highlight">What's special:</p>
+                    <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                        <li>      NOT IMPLEMENTED YET BY ANY COMPANY</li>
+                    
+                    </ul>
+                    
+
+
+                </div>
+
+
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">STARTUP</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Agro-marketplace [Khushhaal Kisaan]</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">An AgroTech platform connecting farmers directly with
+                            consumers, eliminating middleman; using Woo-commerce plugins and custom Javascript. Automated mass outreach
+                            via bulk WhatsApp/SMS using Python, and built an OCR-based pipeline for contact extraction from documents.</p>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="mt-6">
+                        <p class="text-sm text-custom-highlight mb-3 font-medium">Project Screenshots</p>
+                        <div class="image-gallery">
+                            <img src="kisaan 1.png" 
+                                 alt="Khushhaal Kisaan - Dashboard" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Dashboard')">
+                            <img src="4.png" 
+                                 alt="Khushhaal Kisaan - Product Listing" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Product Listing')">
+                            <img src="3.png" 
+                                 alt="Khushhaal Kisaan - Mobile App" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Mobile App')">
+                            <img src="pakkisaan2.png" 
+                                 alt="Khushhaal Kisaan - Analytics" 
+                                 class="gallery-image" 
+                                 onclick="openPopup(this.src, 'Khushhaal Kisaan - Analytics')">
+                        </div>
+                    </div>
+ 
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Thesis Project -->
+        <div class="mb-20">
+            <h2 class="text-3xl font-semibold mb-10 gradient-text">Thesis Project</h2>
+            <div class="glass-card p-8 rounded-xl">
+                <div class="text-sm text-custom-highlight mb-3 font-medium">RESEARCH</div>
+                <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Enhancing Patent Search, Retrieval and Comprehension using GraphRAG</h3>
+                <div class="text-custom-text text-base space-y-6 opacity-90">
+                    <p class="leading-relaxed">This thesis proposes a novel approach to enhance patent search, retrieval, and comprehension by integrating retrieval-augmented generation (RAG) with knowledge graphs, called GraphRAG. Traditional keyword-based and Naive RAG models often miss nuanced information due to limited context handling, affecting search quality for broad queries. GraphRAG addresses these limitations by structuring patent information into knowledge graphs, thus enhancing response accuracy and contextual grounding. Evaluation shows GraphRAG significantly outperforms Naive RAG, especially for complex, global queries, offering potential advancements for patent and legal document analysis.</p>
+                    <p><span class="font-medium text-custom-highlight">Technologies:</span> <span class="text-custom-gray">Neo4j, FAISS, LangChain, OpenAI LLMs, PyPDF2</span></p>
+                    <p><span class="font-medium text-custom-highlight">Techniques:</span> <span class="text-custom-gray">GraphRAG, Knowledge graph construction, vector-based similarity search, community detection, prompt-based fine-tuning, query-focused summarization</span></p>
+                    <p><span class="font-medium text-custom-highlight">Skills:</span> <span class="text-custom-gray">Natural Language Processing (NLP), semantic search, data retrieval, graph databases, generative AI</span></p>
+                </div>
+                <div class="flex items-center space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259561620379504642/" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-
-        <div class="col-1"></div>
-    </div>
-
-
-
-<div class="container my-5 border">
-         <div class="container">
-    <div class="d-flex align-items-center justify-content-center mb-4">
-
-        <img style="height: 50px;" src="gold-trophy-icon-transparent-background_161751-2022.avif" class="img-fluid me-2">
-
-
-        <h1 class="text-center mb-0">HALL OF FAME</h1>
-
-        <img style="height: 50px;" src="gold-trophy-icon-transparent-background_161751-2022.avif" class="img-fluid ms-2">
-    </div>
-</div>
-
-        <div class="row" style="background-color: #0A192F;">
-                               <div class="row"> <span style="font-size: 30px;">  I saw a gap and solved a problem that no one touched till now. It is when I went to a multi-lingual speech. Not everyone speaks those 3 languages. (English, Urdu, Arabic)</span>
-</div>
-                     <div class="col-md-6 col-lg-6 mb-4">
-
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <b style="margin-left:5px"><span style="font-size: 35px;">Biggest achievement one can imagine & I achieved it.</span></b>
-                    <div class="card-body border-primary">
-
-                        <h5 class="card-title"> Multi Lingual Agentic Speech Translation</h5>
-                        <p class="card-text"> Implemented the technique way before than the FATHER OF AI Andrew Ng's Post</p></br>
-                        <p>Improved the system by implementing agents. <b>Accuracy increased upto ~100%</b> </p>
-                        <br/>
-                        <p> Andrew Ng github repo has 4.8k Stars </p>
-                                         <div class="row mt-auto ps-3 pe-3 mb-2 ms-3 me-3">
-                                             <a href="https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                        </div>
-                                      <div class="row mt-auto ps-3 pe-3 mb-2 ms-3 me-3">
-                                             <a href="https://umar-farooq407.medium.com/overcoming-the-nuances-of-multilingual-speech-a-novel-solution-for-accurate-realtime-translation-9ba296fa1b7e?source=social.linkedin" target="_blank" class="btn btn-outline-light">Read Full Medium Story </a>
-                    </div>
-                                          <div class="row mt-auto ps-3 pe-3 mb-2 ms-3 me-3">
-                                             <a href="https://github.com/umar-farooq-khan/Agentic-multilingual-translation" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                    </div>
-                                          </div>
-                </div>
+        <!-- Hall of Fame Section -->
+        <div class="mb-20">
+            <div class="flex items-center justify-center mb-10">
+                <img src="gold-trophy-icon-transparent-background_161751-2022.avif" alt="Trophy" class="h-10 w-10">
+                <h2 class="text-3xl font-semibold mx-6 gradient-text">HALL OF FAME</h2>
+                <img src="gold-trophy-icon-transparent-background_161751-2022.avif" alt="Trophy" class="h-10 w-10">
             </div>
-            <div class="col-md-6 col-lg-6 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title"> Multi Lingual Speech Translation (without AI) </h5>
-                        <p class="card-text">Deployed the system in front of 100s of people. </p></br>
-                        <p>Specifically made for Islamic Multi lingual Sermons that usually includes mixture of Arabic, Urdu and English</p>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3">
-                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a> <br/>
-                       </div>
-
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://github.com/umar-farooq-khan/Agentic-multilingual-translation" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                       </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Multi Lingual Agentic Speech Translation -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">AGENTIC/LLM</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Multi Lingual Agentic Speech Translation</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="font-medium text-custom-highlight">Biggest achievement one can imagine & I achieved it</p>
+                        <p class="leading-relaxed">I saw a gap and solved a problem that no one touched till now. It is when I went to a multi-lingual speech. Not everyone speaks those 3 languages. (English, Urdu, Arabic)</p>
+                        <p class="leading-relaxed">Implemented the technique way before than the FATHER OF AI Andrew Ng's Post</p>
+                        <p class="leading-relaxed">Improved the system by implementing agents. <span class="font-medium text-custom-highlight">Accuracy increased upto ~100%</span></p>
+                        <p class="leading-relaxed">Andrew Ng github repo has 4.8k Stars</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/Agentic-multilingual-translation" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                        <span class="text-sm text-custom-highlight">★ 4.8k</span>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="row">
-            <div class="col-md-6 col-lg-6 mb-4">
-                                  <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">Auto-Optimized Prompts & Suggested Prompts for RAG, Agents & LLMs</h5>
-                        <p class="card-text">It auto optimizes and improves user's query/prompt and shows suggested queries just like an auto complete and user can choose our suggested query or leave it.</br> It automatically increases the accuracy of the responses by optimizing the prompts
-                            <p><b>Whats special: </b> <br/> 1) I devised & implemented this algorithm 4 months earlier than Tech Giant ChatGPT rolled out this feature recently in Nov. Developed this by working on nights as a side project. </br>
-                                    <p>   2) <a href="https://www.linkedin.com/company/adalflow/" >San Francisco Based Startup </a>is based on this auto optimization and have 2k Github stars.
-                            </p>
-                        <p>The feature on ChatGPT looks like this:
-                        </p>
-                        <div class="container">
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-auto">
-                                    <img style="height: 200px;" src="chatgpt.png" class="img-fluid">
-                                </div>
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">AI 3D MODELLING PLATFORM</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Antenna Design Tool</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed"> Developing an AI-powered 3D modeling tool for antenna simulation and customization using 3d js libraries (Three.js) and
+                            automating industry standard Antenna Simulation Tool (CST) focused on next-gen antenna tech.</p>
+                    </div>
+                </br>
+                    <p class="font-medium text-custom-highlight">What's special:</p>
+                    <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                        <li>Billion dollar two companies only implemented this feature up till now June. 2025</li>
+                    </ul>
+                </div>
+                <!-- Multi Lingual Speech Translation (without AI) -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">SPEECH TO TEXT</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Multi Lingual Speech Translation (without AI)</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Deployed the system in front of 100s of people.</p>
+                        <p class="leading-relaxed">Specifically made for Islamic Multi lingual Sermons that usually includes mixture of Arabic, Urdu and English</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/Agentic-multilingual-translation" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Auto-Optimized Prompts -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">LLMS/RAG</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Auto-Optimized Prompts & Suggested Prompts</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">It auto optimizes and improves user's query/prompt and shows suggested queries just like an auto complete and user can choose our suggested query or leave it. It automatically increases the accuracy of the responses by optimizing the prompts</p>
+                        <p class="font-medium text-custom-highlight">What's special:</p>
+                        <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                            <li>I devised & implemented this algorithm 4 months earlier than Tech Giant ChatGPT rolled out this feature recently in Nov. Developed this by working on nights as a side project.</li>
+                            <li><a href="https://www.linkedin.com/company/adalflow/"  class="link-hover text-sm text-custom-highlight" target="_blank">San Francisco Based Startup</a> is based on this auto optimization and raised $2.1M in funding</li>
+                        </ul>
+                    </div>
+                    <p>The feature on ChatGPT looks like this:
+                    </p>
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-auto">
+                                <img style="height: 200px;" src="chatgpt.png" class="img-fluid">
                             </div>
                         </div>
-
-                                                           <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_i-devised-a-new-algorithm-and-wanted-to-share-activity-7213498836898476032-InV2?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                       </div>
-                                                        <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://github.com/umar-farooq-khan/RAG_LLM_Query_Response_Optimizer" target="_blank" class="btn btn-outline-light">View on GitHub</a>
                     </div>
-                                                                                   </div>
-                </div>
-            </div>
-
-                <div class="col-md-6 col-lg-6 mb-4">
-                                  <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">Deans Honorary List and First Class Honors for Academic Achievements in Masters in AI</h5>
-                        <p class="card-text"><span style="font-size: 30px; font-weight:400">The Dean's Honour List </span> seeks to honour those award year students who have performed to an exceptional level throughout the academic year. </p><br/>
-                            <p>Completed the masters degree with outstanding grades and projects and secured a spot on Honorary Dean's List.
-                        <p><b>Whats special: </b> <br/> 1) Only 1-3 (handful) students are on this list usually.
-
-
-
-                                                           <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259561620379504642/" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                       </div>
-
-                                                                                   </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 mb-4">
-
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">(A Novel Technique) Autonomous Car Crash Natural Language Report Generation from Numerical data</h5>
-                        <p class="card-text">Fine-Tuned Google Gemma and Llama2 for this purpose by using PEFT and QLoRA; <b>collaborative research with Phd student of UCD for a research paper<b/></p>
-                                                                                  <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://github.com/umar-farooq-khan/Finetuning-with-PEFT-Qlora-lora" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                    </div>
-                                                                                  </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Masters Projects</h1>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">Legal Document Summarization with Fine-Tuned LLM</h5>
-                        <p class="card-text">Emulating Harvard Lawyers Tone & Style</p>
-                                   <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                                                <a href="https://www.linkedin.com/posts/umar-farooq-khan_legal-document-summarization-using-llms-activity-7168673903672811521-4fr1?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                                  </div>
-                                   <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://github.com/umar-farooq-khan/Legal-Document-Summarization-with-Fine-Tuned-LLM" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                                      </div>
-
-                  </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">LLM-Enhanced Stock Market Portfolio Optimization</h5>
-                        <p class="card-text">using RAG, LangChain, and Deep Learning for PDF
-Financial Reports Comparison & Analysis and Stock Price Prediction with Traditional. ML/DL models.</p>
-                                   <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                                            <a href="https://www.linkedin.com/posts/umar-farooq-khan_llm-aided-stock-portfolio-optimization-activity-7207013038728589313--Yww?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                  </div>
-
-                                                           <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://github.com/umar-farooq-khan/LLM-aiding-Stock-Market" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                    </div>
-                                            </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">LLM enabled Malicious Traffic Detection & Attack Mitigation in Multi-Environment Networks</h5>
-                        <p class="card-text">99%
-Accuracy with Transfer Learning and BiGRU-BiLSTM; research with Phd Student of UCD for a research paper</p>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_malicious-traffic-detection-in-multi-environment-activity-7198358990685175809-NYSC?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-</div>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://github.com/umar-farooq-khan/malicious-traffic-using-deep-learning" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-</div>
-                                          </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">LLM-Driven Visa Application Automation in Embassy-Absent Regions </h5>
-                        <p class="card-text">Automating Bank Statement Analysis
-and Cross-Verifications and Forgery in Documents</p>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                                            <a href="https://www.linkedin.com/posts/umar-farooq-khan_excited-to-share-the-success-of-my-recent-activity-7226509142574673921-c6_g?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-</div>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://github.com/umar-farooq-khan/LLM-driven-visa-processing" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-                   </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_i-devised-a-new-algorithm-and-wanted-to-share-activity-7213498836898476032-InV2" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/RAG_LLM_Query_Response_OptimizerM" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-        <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Movie Rating Prediction from Posters using LSTM & VGG16</h5>
-
-
-                <p class="card-text">Prediction of Rating only with the help of Posters. Use case: So that movie crew can make more better posters.
-                    Unimodal and Multimodal Models</p>
-
-                             <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-                <a href="https://github.com/umar-farooq-khan/movie_poster_prediction" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                              <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">Transport for London Analysis & Prediction </h5>
-                        <p class="card-text">Anomaly Detection, Time Series, and Clustering, Ridership Patterns
-and Holiday Impact Assessment</p>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-                                                    <a href="https://github.com/umar-farooq-khan/TFL_analysis_prediction" target="_blank" class="btn btn-outline-light">View on GitHub</a>
-
-                        </div>
+                <!-- Dean's Honorary List -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">ACADEMIC EXCELLENCE</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Dean's Honorary List and First Class Honors for Academic Achievements in Masters in AI</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed"><span class="text-3xl font-normal">The Dean's Honour List</span> seeks to honour those award year students who have performed to an exceptional level throughout the academic year.</p>
+                        <p class="leading-relaxed">Completed the masters degree with outstanding grades and projects and secured a spot on Honorary Dean's List.</p>
+                        <p class="font-medium text-custom-highlight">What's special:</p>
+                        <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                            <li>Only 1-3 (handful) students are on this list usually.</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259561620379504642/" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn Post ↗</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">Making LLMs and RAGs more sustainable; Novel Approaches </h5>
-                        <p class="card-text">Anomaly Detection, Time Series, and Clustering, Ridership Patterns
-and Holiday Impact Assessment</p>
-                                   <div class="row   ps-3 pe-3 mb-2 ms-3 me-3" >
-
-                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_im-thrilled-to-announce-the-success-of-my-activity-7254053889056849921-ciIO?utm_source=share&utm_medium=member_desktop" target="_blank" class="btn btn-outline-light">LinkedIn Post</a>
-                        </div>
+                <!-- Autonomous Car Crash Report -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">RESEARCH</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">(A Novel Technique) Autonomous Car Crash Natural Language Report Generation from Numerical data</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Using Fine-Tuned Google Gemma and Llama2 model with PEFT and QLoRA; research with <b>Phd student of UCD for a research paper</b></p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://github.com/umar-farooq-khan/Finetuning-with-PEFT-Qlora-lora" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Personal Projects</h1>
-        <div class="row">
-                               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">[Startup] Khushhaal Kisaan</h5>
-                        <p class="card-text">A web marketplace for connecting Pakistani Farmers directly to the consumer to sell their product at their own desired rate.</p>
-                         <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://khushaalkisaan.com/" target="_blank" class="btn btn-outline-light">Visit Website</a>
+
+        <!-- Masters Projects -->
+        <div class="mb-20">
+            <h2 class="text-3xl font-semibold mb-10 gradient-text">Masters Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Legal Document Summarization -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">PYTHON</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Legal Document Summarization with Fine-Tuned LLM</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">mproved ROUGE scores up to 150%, Cosine similarity by 2.8%,
+                            and Jaccard similarity by 47%, emulating Harvard lawyers in tone and style</p>
                     </div>
-                       </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_legal-document-summarization-using-llms-activity-7168673903672811521-4fr1" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/Legal-Document-Summarization-with-Fine-Tuned-LLM" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Stock Market Portfolio -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">ML/FINANCE</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">LLM-Enhanced Stock Market Portfolio Optimization</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">using LangChain, RAG, and Explainable AI for financial reports for analysis and price
+                            prediction, achieving 90% precision, 70% accuracy by implementing 30+ ML/DL algorithms using Tensorflow.</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_llm-aided-stock-portfolio-optimization-activity-7207013038728589313--Yww" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/LLM-aiding-Stock-Market" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Malicious Traffic Detection -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">ML/CYBER SECURITY</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">LLM enabled Malicious Traffic Detection & Attack Mitigation in Multi-Environment Networks</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Increased the accuracy to 99% with
+                            Transfer Learning, implementing BiGRU-BiLSTM using Tensorflow; for a research paper</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_malicious-traffic-detection-in-multi-environment-activity-7198358990685175809-NYSC" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/malicious-traffic-using-deep-learning" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Visa Application Automation -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">AUTOMATION/LLM</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">LLM-Driven Visa Application Automation in Embassy-Absent Regions</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Reduced processing time by 97%, transforming a €1B monthly loss into
+                            €60M in profit, a 700% increase, through automation of cross-verifications and document forgery checks</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_excited-to-share-the-success-of-my-recent-activity-7226509142574673921-c6_g" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/LLM-driven-visa-processing" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Movie Rating Prediction -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">DEEP LEARNING</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Movie Rating Prediction from Posters using LSTM & VGG16</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">chieved Impressive 0.14 MAE and 85% variance by
+                            developing unimodal and multimodal models using VGG16 pre-trained models and LSTM, CNN</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://github.com/umar-farooq-khan/movie_poster_prediction" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Transport for London Analysis -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">DATA SCIENCE</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Transport for London Analysis & Prediction</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">chieved 93% SVM Accuracy, 0.62 R2 Score. Identified key anomalies and snow
+                            impacts on ridership. Utilized Time Series Forecasting, Clustering, geospatial visualization</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://github.com/umar-farooq-khan/TFL_analysis_prediction" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
+                </div>
+
+                <!-- Sustainable LLMs -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">AI SUSTAINABILITY</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent"><b>Novel Technique:</b> Making LLMs and RAGs more sustainable</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Novel Approaches for making LLMs and RAGs more sustainable and efficient</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://www.linkedin.com/posts/umar-farooq-khan_im-thrilled-to-announce-the-success-of-my-activity-7254053889056849921-ciIO" target="_blank" class="link-hover text-sm text-custom-highlight">LinkedIn ↗</a>
+                        <a href="https://github.com/umar-farooq-khan/TFL_analysis_prediction" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
                 </div>
             </div>
-
-                            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title">[Startup] Nordic Wise </h5>
-                        <p class="card-text">Developed an AI-based engineers outsourcing and job portal website from scratch using Django web framework. Used <span style="font-size:20px; font-weight:500">Gen AI techniques to extract details in resumes and cover letters specifically with LLMs. </span>
-<br/>
-Deployed the website on Railway, a cloud platform providing a simple and scalable hosting solution for web applications.</p>
-                         <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://github.com/umar-farooq-khan/NordicWise" target="_blank" class="btn btn-outline-light">View on Github</a>
-                    </div>
-                         <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://www.linkedin.com/in/umar-farooq-khan/" target="_blank" class="btn btn-outline-light">Full Details on LinkedIn</a>
-                    </div>
-                       </div>
-                </div>
-            </div>
-
-
-
-
-
         </div>
-    </div>
 
-          <div class="container my-5">
-        <h1 class="text-center mb-4">Notable Freelance Projects</h1>
-        <div class="row">
-                               <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title"> Pullser 2020 (News Website)</h5>
-                        <p class="card-text">News website using <span style="font-size: 20px; font-weight:500">Angular & Nodejs </span>& Javascript. Customized newsfeed using ML and AI algorithms to show related  and interest based news.</p>
-                         <div class="row ps-3 pe-3 mb-2 ms-3 me-3" >
-                        <a href="https://github.com/umar-farooq-khan/AI-news-aggregtor-website-nodejs-angular" target="_blank" class="btn btn-outline-light">View on Github</a>
+        <!-- Personal Projects -->
+        
+        <!-- Notable Freelance Projects -->
+
+        
+        <div class="mb-20">
+            <h2 class="text-3xl font-semibold mb-10 gradient-text">Notable Freelance Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pullser 2020 -->
+
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">ANDROID APP</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">DYSLEXIA ANDROID APP (2019-2021)</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Engineered and maintained an application for dyslexic children using Java and Android SDK;
+                            maintained a 0% crash rate and supported 3,000+ daily users through production lifecycle in Agile sprints.
+                            </p>
                     </div>
-                       </div>
+                    <p class="font-medium text-custom-highlight">What's special:</p>
+                    <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                        <li>3,000+ daily users</li>
+                        <li>Maintained for 1.5 years</li>
+                        <li>0% crash rate</li>
+                        <li>Optimized Database keeping it under free tier</li>
+
+                    </ul>
+       
                 </div>
 
-            </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 shadow-sm border-primary" style="background-color: #0A192F; ">
-                    <div class="card-body border-primary">
-                        <h5 class="card-title"> Career Counseling Platform(2021):  </h5>
-                        <p class="card-text">Using <span style="font-size: 20px; font-weight:500"> AngularJs & Nodejs </span> for students, job seekers, art enthusiast to seek mentorship from their dream coaches.
-                            <br/> <b> Whats Special: </b><br/>
-                            Project under ex-Microsoft Director level and Ex-Microsoft Software engineer; for their startup and got 5 stars.</p>
 
-                       </div>
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">NEWS WEBSITE</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Pullser 2020 (News Website)</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">News website using Angular & Nodejs & Javascript. Customized newsfeed using ML and AI algorithms to show related and interest based news.</p>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-6">
+                        <a href="https://github.com/umar-farooq-khan/AI-news-aggregtor-website-nodejs-angular" target="_blank" class="link-hover text-sm text-custom-highlight">GitHub ↗</a>
+                    </div>
                 </div>
 
+                <!-- Career Counseling Platform -->
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-sm text-custom-highlight mb-3 font-medium">MENTORSHIP PLATFORM</div>
+                    <h3 class="text-2xl font-semibold mb-6 text-custom-accent">Career Counseling Platform (2021)</h3>
+                    <div class="text-custom-text text-base space-y-4 opacity-90">
+                        <p class="leading-relaxed">Using AngularJs & Nodejs for students, job seekers, art enthusiast to seek mentorship from their dream coaches.</p>
+                        <p class="font-medium text-custom-highlight">What's special:</p>
+                        <ul class="list-disc pl-4 space-y-2 leading-relaxed">
+                            <li>Project under ex-Microsoft Director level and Ex-Microsoft Software engineer; for their startup and got 5 stars.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-
-
-
-
         </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 flex items-center space-x-6">
+            <a href="https://github.com/umar-farooq-khan" target="_blank" class="link-hover text-custom-text text-sm">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/umar-farooq-khan/" target="_blank" class="link-hover text-custom-text text-sm">LinkedIn ↗</a>
+        </footer>
+    </main>
+
+    <!-- Popup Modal -->
+    <div id="imagePopup" class="popup-modal">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <img class="popup-content" id="popupImage">
+        <div id="popupCaption" class="text-center text-white mt-4 text-lg font-medium"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Replace all instances of these classes in the document
+        document.body.innerHTML = document.body.innerHTML
+            .replace(/bg-card-bg/g, 'bg-custom-card')
+            .replace(/text-custom-text\/70/g, 'text-custom-gray')
+            .replace(/text-custom-text/g, 'text-custom-text');
+        
+        // Popup functionality
+        function openPopup(imageSrc, caption) {
+            const modal = document.getElementById('imagePopup');
+            const modalImg = document.getElementById('popupImage');
+            const captionText = document.getElementById('popupCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            captionText.innerHTML = caption;
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closePopup() {
+            const modal = document.getElementById('imagePopup');
+            modal.style.display = 'none';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('imagePopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
+        });
+    </script>
 </body>
 </html>
