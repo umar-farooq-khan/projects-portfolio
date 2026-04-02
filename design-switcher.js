@@ -22,16 +22,15 @@ function switchDesign(designKey) {
     const themeLink = document.getElementById('theme-stylesheet');
     themeLink.href = design.stylesheet;
 
-    // Update button text
-    const btn = document.getElementById('design-switcher');
-    btn.textContent = `🎨 Design: ${design.name}`;
-
     // Store preference
     localStorage.setItem(STORAGE_KEY, designKey);
 
     // Update body class for design-specific styling
     document.body.className = document.body.className.replace(/design-\w+/, '');
     document.body.classList.add(design.class);
+
+    // Update button states
+    updateToggleButtons(designKey);
 
     // Force page refresh to properly apply styles
     setTimeout(() => {
@@ -40,9 +39,6 @@ function switchDesign(designKey) {
 
     // Update popup modal styling for Swiss design
     updatePopupStyling(designKey);
-    
-    // Update button styling
-    updateButtonStyling();
 }
 
 function updatePopupStyling(designKey) {
@@ -60,19 +56,13 @@ function updatePopupStyling(designKey) {
     }
 }
 
-function updateButtonStyling() {
-    const btn = document.getElementById('design-switcher');
-    const design = getSavedDesign();
-
-    if (design === 'swiss') {
-        btn.style.background = '#000000';
-        btn.style.color = '#FFFFFF';
-        btn.style.border = '2px solid #000000';
-    } else {
-        btn.style.background = 'rgba(255,255,255,0.1)';
-        btn.style.color = '#FFFFFF';
-        btn.style.border = '1px solid rgba(255,255,255,0.3)';
-    }
+function updateToggleButtons(designKey) {
+    document.querySelectorAll('.design-toggle-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-design') === designKey) {
+            btn.classList.add('active');
+        }
+    });
 }
 
 // Get saved design or default to 'current'
@@ -81,19 +71,32 @@ function getSavedDesign() {
 }
 
 // Setup design switcher button
-document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('design-switcher');
+function initDesignSwitcher() {
+    const buttons = document.querySelectorAll('.design-toggle-btn');
+    if (buttons.length === 0) {
+        // Buttons not yet loaded, retry in 100ms
+        setTimeout(initDesignSwitcher, 100);
+        return;
+    }
+
     const currentDesign = getSavedDesign();
 
     // Apply saved design
     switchDesign(currentDesign);
 
-    // Button click handler - cycle through designs
-    btn.addEventListener('click', () => {
-        const designs = Object.keys(DESIGNS);
-        const current = getSavedDesign();
-        const currentIndex = designs.indexOf(current);
-        const nextIndex = (currentIndex + 1) % designs.length;
-        switchDesign(designs[nextIndex]);
+    // Add click handlers to each button
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const design = btn.getAttribute('data-design');
+            switchDesign(design);
+        });
     });
-});
+}
+
+// Wait for page to load, then initialize
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDesignSwitcher);
+} else {
+    // If already loaded, init immediately
+    setTimeout(initDesignSwitcher, 100);
+}

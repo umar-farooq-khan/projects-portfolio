@@ -1,0 +1,520 @@
+{
+  "profile": {
+    "name": "Umar Farooq Khan",
+    "title": "Senior AI Software Engineer",
+    "location": "Dublin, Ireland",
+    "email": "umar.farooq407@gmail.com",
+    "phone": "+353 89 983 7730",
+    "bio": "Senior AI Software Engineer specialising in LLMs, agentic systems, and production GenAI, building autonomous AI pipelines, LLM orchestration frameworks, and full-stack AI products end-to-end."
+  },
+  "experience": [
+    {
+      "id": "coso-ai",
+      "company": "Coso AI",
+      "title": "Senior Software Engineer (AI)",
+      "location": "Dublin, Ireland 🇮🇪",
+      "duration": "July 2025 – Present (8 Months)",
+      "highlights": [
+        "Engineered a Behavioural Rules Extraction Engine that autonomously learns implicit rules from human editing patterns — the same principle formalised in Inverse Constitutional AI (ICLR 2025) and Direct Preference Optimization (NeurIPS 2023)",
+        "Built a production LLM Orchestration Framework with structured output generation, tool-use function calling, agentic execution loops — full ReAct reasoning-action paradigm implementation",
+        "Built Verification-Gated Self-Correcting Agents implementing Reflexion and Self-Refine paradigm in production",
+        "Engineered a Dynamic Context Pruning Engine for real-time context scoring — production implementation of MemGPT and H2O Heavy-Hitter Oracle principles",
+        "Developed Cross-Platform Content Validation Framework with pre-publish safety checks for social media moderation",
+        "Full-stack feature ownership across monorepo (database schema → backend → lambda functions → SvelteKit UI)",
+        "Managed multi-environment deployments on SST with AWS Lambda, S3, and API Gateway"
+      ],
+      "technologies": ["GenAI", "LLMs", "Python", "SvelteKit", "AWS", "Lambda", "S3", "API Gateway"]
+    },
+    {
+      "id": "peak-antenna",
+      "company": "Peak Antenna AB",
+      "title": "AI Software Engineer",
+      "location": "Gothenburg, Sweden 🇸🇪",
+      "duration": "Dec 2024 – Aug 2025 (8 Months)",
+      "highlights": [
+        "Developing an AI-powered 3D modeling tool for antenna simulation and customization using Three.js",
+        "Automating industry standard Antenna Simulation Tool (CST) using Python and GenAI for report generation",
+        "Automated design workflows and simulation processes using LLMs, improving prototyping and validation speed",
+        "Integrated GenAI workflows with AWS services, optimizing model inference cost and latency",
+        "Collaborated with Antenna Design Engineers to deliver tailored AI solutions for IoT clients",
+        "Developed a highly responsive and customized e-commerce website for antenna products using Shopify"
+      ],
+      "technologies": ["GenAI", "LLMs", "Python", "Django", "AWS", "Three.js", "CST"],
+      "note": "Only two billion-dollar companies have implemented similar AI 3D modeling features (as of June 2025)"
+    },
+    {
+      "id": "clear-ip",
+      "company": "Clear IP Limited",
+      "title": "Lead AI Software Engineer",
+      "location": "Dublin, Ireland 🇮🇪",
+      "duration": "Jun 2024 – Nov 2024 (6 Months)",
+      "highlights": [
+        "Led design and development of Generative AI system to automate patent and legal document generation using OpenAI and HuggingFace LLMs with RAG",
+        "Enhanced quality via benchmarking and NLP evaluation, significantly improving response groundedness and factuality",
+        "Architected and delivered NDA E-signature web app (DocuSign-style) using Node.js and AWS EC2/S3",
+        "Integrated AI-generated document workflows with Django backend and React frontend",
+        "Reduced document processing time by 95.8% and manual workload by 99%",
+        "Implemented distributed system principles scaling services across AWS with Docker, CI/CD, and GitHub Actions"
+      ],
+      "technologies": ["GenAI", "LLMs", "Python", "Django", "Node.js", "React", "AWS", "Docker"]
+    },
+    {
+      "id": "fiverr-ai",
+      "company": "Fiverr",
+      "title": "AI Software Engineer",
+      "location": "Remote",
+      "duration": "Aug 2019 – Sep 2023 (4 yrs 2 mos)",
+      "highlights": [
+        "Delivered 100+ projects with 100% satisfaction rate and 100% on-time delivery",
+        "Maintained 73+ five-star reviews (5/5 average rating) across AI, ML, and software development projects",
+        "Achieved Level 2 Seller status (two levels above standard seller, one below Top Rated) — significantly more difficult to maintain than traditional GPA metrics",
+        "Specialized in AI/ML projects, data analysis, software engineering tasks, web development, and application development",
+        "Expertise across diverse tech stack: Python, Machine Learning, Deep Learning, Angular, Flask, Django, SQL, NoSQL"
+      ],
+      "technologies": ["Python", "Machine Learning", "Deep Learning", "Angular", "Flask", "Django", "SQL", "NoSQL", "Java", "Kotlin"]
+    },
+    {
+      "id": "upwork-ai",
+      "company": "Upwork",
+      "title": "AI Software Engineer",
+      "location": "Remote",
+      "duration": "Aug 2019 – Sep 2023 (4 yrs 2 mos)",
+      "highlights": [
+        "Maintained 5/5 star rating with zero warnings or incidents across entire tenure",
+        "Provided same comprehensive services as Fiverr: AI, machine learning, software engineering, programming tutoring, data analytics, dashboards, and web development",
+        "Built strong client relationships through consistent delivery and technical excellence",
+        "Expertise in multiple programming languages and frameworks"
+      ],
+      "technologies": ["Python", "Machine Learning", "Deep Learning", "Angular", "Flask", "Django", "SQL", "NoSQL", "Java", "Kotlin", "Android Development"]
+    },
+    {
+      "id": "nordicwise",
+      "company": "NordicWise",
+      "title": "AI Engineer (Co-Founder)",
+      "location": "Gothenburg, Sweden 🇸🇪",
+      "duration": "Feb 2023 – Aug 2023 (7 Months)",
+      "highlights": [
+        "Engineered AI-powered CV parsing and recruitment automation using structured LLM outputs — implemented in early 2023, over a year before OpenAI formally introduced Structured Outputs as a feature",
+        "Built Standard CV generation pipeline automating what LinkedIn Easy Apply required manual effort for",
+        "Parsed heterogeneous PDF and DOCX formats with high field-extraction accuracy using custom schema enforcement",
+        "Deployed at scale using Django with high-concurrency support and RESTful APIs"
+      ],
+      "technologies": ["GenAI", "LLMs", "Python", "Django", "PDF/DOCX parsing"]
+    },
+    {
+      "id": "ufk-etsy",
+      "company": "Etsy",
+      "title": "Ecommerce Business Owner",
+      "location": "Remote",
+      "duration": "Dec 2021 – Feb 2023 (1 yr 3 mos)",
+      "highlights": [
+        "Generated €50,000 annual turnover with 50% profit margin for UFK Clothing streetwear and Y2K brand",
+        "Achieved Star Seller status multiple times, demonstrating consistent quality and customer satisfaction",
+        "Maintained 5/5 star rating throughout operations",
+        "Built and scaled e-commerce brand from concept to profitable operation"
+      ],
+      "technologies": ["E-commerce", "Business Operations", "Customer Service", "Inventory Management"]
+    },
+    {
+      "id": "lesptitsmonstres",
+      "company": "LesPtitsMonstres.fr",
+      "title": "Lead Software Engineer (Android)",
+      "location": "Montpellier, France 🇫🇷",
+      "duration": "Aug 2019 – Feb 2021 (1 yr 7 mos)",
+      "highlights": [
+        "Developed article reading and learning app for dyslexic children using Android SDK, Java, Kotlin, and XML with Firebase backend",
+        "Maintained 0% crash rate and 0% ANRs (Application Not Responding) across 3,000+ active users",
+        "Full product ownership and maintenance over 1.5 years using Agile methodology",
+        "Integrated custom Text-to-Speech with granular controls (speed, language) for auditory learning across app and website",
+        "Curated dyslexia-specific content with PDF downloads and interactive features designed with occupational therapists",
+        "Implemented dyslexic-friendly fonts and screen contrast settings for accessibility",
+        "WordPress custom feature implementation for supporting website"
+      ],
+      "technologies": ["Android SDK", "Java", "Kotlin", "XML", "Firebase", "Agile", "WordPress"]
+    },
+    {
+      "id": "bothofus",
+      "company": "BothOfUs",
+      "title": "Android Developer",
+      "location": "Stockholm, Sweden 🇸🇪",
+      "duration": "Sep 2020 (1 mo)",
+      "highlights": [
+        "Developed end-to-end Android features, transforming Figma mockups into production-ready screens",
+        "Built audio-to-tune memory-assistance app (later acquired/launched by CapCut)",
+        "Engineered Firebase database integrations, push notifications, and dynamic UI animations",
+        "Rapid debugging and optimization in Agile sprint cycles ensuring app stability and performance",
+        "Collaborated with design and product teams to deliver high-quality user experience"
+      ],
+      "technologies": ["Android SDK", "Java", "Kotlin", "Firebase", "REST APIs", "Figma"]
+    },
+    {
+      "id": "cyber-security-internship",
+      "company": "National Center for Cyber Security",
+      "title": "AI Researcher",
+      "location": "Islamabad, Pakistan 🇵🇰",
+      "duration": "May 2019 – Jul 2019 (3 mos)",
+      "highlights": [
+        "Conducted research on detecting and protecting against anti-state statements on social media",
+        "Developed system identifying origin/hotspots of viral anti-state hashtags through geospatial analysis",
+        "Successfully created local regional dataset with manual filtering and annotation (subject to disclosure restrictions)",
+        "Performed multi-label and multi-class manual data labeling in Roman Urdu and English",
+        "Collaborated directly with sensitive government organization on social media forensics and data analysis"
+      ],
+      "technologies": ["Python", "Data Analysis", "NLP", "Social Media Forensics", "Dataset Curation"]
+    }
+  ],
+  "personal_projects": [
+    {
+      "id": "coherify",
+      "name": "COHERIFY - AI Text Rephrasing Chrome Extension",
+      "category": "AI CHROME EXTENSION",
+      "description": "Engineered and productionized a GenAI text rephrasing Chrome extension using Express.js and LLM APIs",
+      "highlights": [
+        "100+ users across Tier 1-3 countries",
+        "Reduced latency by 68% (3.7s → 1.2s)",
+        "Increased tokens per second (TPS) by 205%",
+        "Integrated Perplexity API for fact-checking rephrasals",
+        "Free-form tone & style rules engine for user-defined rephrasing preferences"
+      ],
+      "links": {
+        "chrome": "https://chromewebstore.google.com/detail/coherify-improve-your-tex/jfghnihkkbhdllbjighlneenimkakoog"
+      }
+    },
+    {
+      "id": "stealth",
+      "name": "Stealth - Real-Time Geospatial Platform",
+      "category": "REAL-TIME MAPPING",
+      "description": "Independently built and scaled a map-based platform with zero-latency rendering under high-concurrency load",
+      "highlights": [
+        "700+ users across 44+ countries",
+        "400+ users on day one",
+        "Zero-latency rendering under high-concurrency load",
+        "Real-time data sync with sub-second consistency at scale",
+        "Validated through rigorous stress and spike testing"
+      ]
+    },
+    {
+      "id": "accent-normalization",
+      "name": "Real-time Accent Normalization with Voice Cloning",
+      "category": "VOICE/SPEECH",
+      "description": "Built a real-time speech-to-speech accent normalization system that preserves speaker's voice and emotional tone",
+      "highlights": [
+        "2nd Place — ElevenLabs Hackathon, Stripe Dublin",
+        "Designed for global teams where accents reflect diversity, not ability",
+        "Preserves speaker's original voice and emotional tone through voice cloning",
+        "Built with SvelteKit, Mozilla STT, and ElevenLabs voice features"
+      ]
+    },
+    {
+      "id": "p2p-payment",
+      "name": "Decentralized Agentic P2P Payment System",
+      "category": "BLOCKCHAIN/AGENTS",
+      "description": "Natural language P2P payment system where Telegram-based agent autonomously executes cross-border transfers",
+      "highlights": [
+        "Published weeks before OpenClaw popularised the Telegram-agent paradigm",
+        "Zero-fee, sub-10-second global pipeline on stablecoins & crypto wallets",
+        "Multilingual interface removes dependency on traditional banking infrastructure",
+        "30 hrs Hackathon project"
+      ]
+    },
+    {
+      "id": "openclaw-optimizer",
+      "name": "OpenClaw — Agentic Work-Life Optimizer",
+      "category": "AGENTIC SYSTEMS",
+      "description": "One of the earliest real-world agentic systems built on OpenClaw - Telegram-based decision layer for life optimization",
+      "highlights": [
+        "Interprets natural language, emotional context, and priority constraints",
+        "Autonomously reschedule, consolidate, or decline meetings",
+        "Connects with Google calendar, goal trackers, and lifestyle platforms",
+        "Holistic life optimization system"
+      ]
+    },
+    {
+      "id": "quranic-alignment",
+      "name": "Online Melody-Aware Forced Alignment for Quranic Recitation",
+      "category": "DETERMINISTIC AI/AUDIO",
+      "description": "Fully deterministic, offline audio recognition system that identifies and displays exact Quranic verses in real-time",
+      "highlights": [
+        "Zero latency, zero hallucination, no cloud",
+        "Handles tonal and melodic Quranic recitation across different reciters and maqamat",
+        "Achieved without any labeled dataset, crowd-sourced audio, or model fine-tuning",
+        "Determinism is intentional; hallucination is architecturally impossible"
+      ]
+    },
+    {
+      "id": "bidirectional-rag",
+      "name": "Bidirectional Similarity Ranking for Intent-Aware Query Optimization in RAG",
+      "category": "RAG/LLM OPTIMIZATION",
+      "description": "Query optimization algorithm generating N intent-aware variants of user's prompt with bidirectional similarity scoring",
+      "highlights": [
+        "Published 2023",
+        "Predates and parallels Rewrite-Retrieve-Read, Query2Doc, and Google DeepMind's OPRO",
+        "Only approach combining multi-query generation, bidirectional similarity ranking, and user-in-the-loop selection",
+        "Reduces hallucinations and token waste in RAG pipelines"
+      ]
+    },
+    {
+      "id": "multilingual-speech",
+      "name": "Multilingual Agentic Speech to Text Translation System",
+      "category": "SPEECH/TRANSLATION",
+      "description": "High-accuracy, low-latency real-time speech recognition and translation for multilingual contexts",
+      "highlights": [
+        "Deployed in Ireland mosques and collaborating with other mosques",
+        "Outperforms YouTube's auto-captions by over 22%",
+        "Custom homophone disambiguation and accent handling",
+        "Independently developed same novel methodology published by Andrew Ng and UC Berkeley researchers"
+      ]
+    }
+  ],
+  "hall_of_fame": [
+    {
+      "id": "multilingual-speech-agentic",
+      "name": "Multi Lingual Agentic Speech Translation",
+      "repeated": true,
+      "category": "AGENTIC/LLM",
+      "description": "Biggest achievement - solved a problem no one touched before",
+      "highlights": [
+        "Deployed in Ireland mosques and collaborating with other mosques",
+        "Handles multi-lingual speech (English, Urdu, Arabic)",
+        "Improved system accuracy up to ~100% using agentic systems",
+        "Independently implemented technique way before Andrew Ng's post",
+        "Andrew Ng's github repo has 4.8k Stars"
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw",
+        "github": "https://github.com/umar-farooq-khan/Agentic-multilingual-translation"
+      }
+    },
+    {
+      "id": "antenna-3d-tool",
+      "name": "Antenna Design Tool - AI 3D Modelling Platform",
+      "category": "AI 3D MODELLING PLATFORM",
+      "description": "Developing an AI-powered 3D modeling tool for antenna simulation and customization",
+      "highlights": [
+        "Only two companies worth Billion dollars have implemented this feature (as of June 2025)",
+        "Uses 3D JS library for next-gen antenna technology",
+        "Automates industry-standard Antenna Simulation Tool (CST)",
+        "GenAI-powered report generation"
+      ]
+    },
+    {
+      "id": "speech-to-text",
+      "name": "Multi Lingual Speech to Text (Deterministic Approach)",
+      "repeated": true,
+      "category": "SPEECH TO TEXT",
+      "description": "Online Melody-Aware Forced Alignment for Quranic Recitation",
+      "highlights": [
+        "Deployed in front of 100s of people",
+        "Specifically made for Islamic multilingual sermons",
+        "Mixture of Arabic, Urdu and English",
+        "Zero latency, zero hallucination, no cloud",
+        "Achieved without any labeled dataset or model fine-tuning"
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/posts/umar-farooq-khan_github-andrewyngtranslation-agent-activity-7211634096106594309-DRTw",
+        "github": "https://github.com/umar-farooq-khan/Agentic-multilingual-translation"
+      }
+    },
+    {
+      "id": "auto-optimized-prompts",
+      "name": "Auto-Optimized Prompts & Suggested Prompts",
+      "repeated": true,
+      "category": "LLMS/RAG",
+      "description": "Auto-optimized query improvement that increases response accuracy",
+      "highlights": [
+        "Devised & implemented 4 months earlier than ChatGPT rolled out this feature",
+        "Developed as a side project working on nights",
+        "Automatically optimizes and improves user's query/prompt",
+        "Shows suggested queries like an auto-complete",
+        "San Francisco Based Startup (AdaFlow) raised $2.1M based on this concept"
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/posts/umar-farooq-khan_i-devised-a-new-algorithm-and-wanted-to-share-activity-7213498836898476032-InV2",
+        "github": "https://github.com/umar-farooq-khan/RAG_LLM_Query_Response_OptimizerM"
+      }
+    },
+    {
+      "id": "deans-list",
+      "name": "Dean's Honorary List - First Class Honors",
+      "category": "ACADEMIC EXCELLENCE",
+      "description": "Outstanding academic achievement in Master's in AI",
+      "highlights": [
+        "Awarded for exceptional performance throughout the academic year",
+        "Only 1-3 (handful) students are on this list usually",
+        "Completed masters with outstanding grades and projects",
+        "Secured spot on Honorary Dean's List"
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7259561620379504642/"
+      }
+    },
+    {
+      "id": "crash-report-novel",
+      "name": "Novel Technique: Autonomous Car Crash Report Generation",
+      "category": "RESEARCH",
+      "description": "Fine-tuned LLM for natural language report generation from numerical data",
+      "highlights": [
+        "Using Google Gemma and Llama2 models",
+        "Fine-tuned with PEFT and QLoRA",
+        "Research collaboration with PhD student from UCD",
+        "For a research paper"
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/Finetuning-with-PEFT-Qlora-lora"
+      }
+    },
+    {
+      "id": "bidirectional-ranking",
+      "name": "Bidirectional Similarity Ranking for RAG",
+      "repeated": true,
+      "category": "PUBLISHED RESEARCH",
+      "description": "Query optimization algorithm for intent-aware prompt improvement",
+      "highlights": [
+        "Published 2023",
+        "Independently devised multi-query generation with bidirectional similarity",
+        "Predates and parallels Rewrite-Retrieve-Read, Query2Doc, and Google DeepMind's OPRO",
+        "Only approach combining multi-query generation, bidirectional similarity ranking, and user-in-the-loop"
+      ]
+    },
+    {
+      "id": "elevenlabs-hackathon",
+      "name": "Real-time Accent Normalization with Voice Cloning",
+      "repeated": true,
+      "category": "HACKATHON WINNER",
+      "description": "2nd Place — ElevenLabs Hackathon, Stripe Dublin",
+      "highlights": [
+        "Real-time speech-to-speech accent normalization",
+        "Preserves speaker's original voice and emotional tone",
+        "Designed for global teams where accents reflect diversity",
+        "Built with SvelteKit, Mozilla STT, and ElevenLabs",
+        "2nd Place in ElevenLabs Hackathon"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master's in Artificial Intelligence",
+      "school": "National College of Ireland",
+      "location": "Dublin, Ireland 🇮🇪",
+      "duration": "Sept 2023 – Nov 2024",
+      "highlights": [
+        "Thesis (Patent Pending/NDA): Semantic Enhancement in Document Retrieval in RAG using Knowledge Graph",
+        "Developed GraphRAG-based framework enhancing retrieval quality",
+        "Increased comprehensiveness by 150% and groundedness by 47%",
+        "Improved BLEU score by 300% and Cosine Similarity by 295%",
+        "LLM-as-a-judge preferred responses by 700%"
+      ],
+      "awards": "Dean's List - Distinction/First Class Honors 1:1",
+      "scholarship": "€4000 Scholarship for excellent academic performance"
+    },
+    {
+      "degree": "Bachelor's (Hons) in Computer Science",
+      "school": "Air University",
+      "location": "Islamabad, Pakistan 🇵🇰",
+      "duration": "2016 – 2020",
+      "highlights": [
+        "Thesis: Developed ML model achieving 97% accuracy for predicting anti-state tweets",
+        "Deployed Flask app to analyze and visualize anti-state hashtags, origins & hotspots"
+      ]
+    }
+  ],
+  "thesis_projects": [
+    {
+      "id": "graphrag-thesis",
+      "name": "Semantic Enhancement in Document Retrieval in RAG using Knowledge Graph",
+      "status": "Patent Pending/NDA",
+      "highlights": [
+        "Increased comprehensiveness by 150%",
+        "Increased groundedness by 47%",
+        "Improved BLEU score by 300%",
+        "Improved Cosine Similarity by 295%",
+        "LLM-as-a-judge preferred responses by 700%"
+      ]
+    },
+    {
+      "id": "stock-portfolio",
+      "name": "RAG based Stock Market Portfolio Optimization",
+      "highlights": [
+        "Using LangChain and Explainable AI for financial reports analysis",
+        "Price prediction achieving 90% precision, 70% accuracy",
+        "Implemented 30+ ML/DL algorithms"
+      ]
+    },
+    {
+      "id": "legal-doc-summarization",
+      "name": "Fine-tuning LLM for Legal Document Summarization",
+      "highlights": [
+        "Improved ROUGE scores by up to 150%",
+        "Achieved 80–90% absolute ROUGE",
+        "~85% cosine & Jaccard similarity vs. expert-authored legal summaries",
+        "Captured same tone, precision, and style as seasoned legal experts"
+      ]
+    },
+    {
+      "id": "crash-report-generation",
+      "name": "Autonomous Car Crash Report Generation from Numerical Data",
+      "highlights": [
+        "Fine-tuned Google Gemma/Llama2 with PEFT and QLoRA",
+        "For research paper with PhD student"
+      ]
+    },
+    {
+      "id": "malicious-traffic",
+      "name": "Malicious Traffic Detection in Multi-Environment Networks",
+      "highlights": [
+        "Achieved 98.6% accuracy, pushed to 99% with Transfer Learning",
+        "Novel ensemble BiGRU-BiLSTM architecture using TensorFlow",
+        "Single model across both IoT and IP-based network environments",
+        "Collaboration with PhD student for research paper"
+      ]
+    },
+    {
+      "id": "visa-automation",
+      "name": "Agentic LLM-Driven Visa Processing Automation",
+      "highlights": [
+        "Reduced processing time by 97%",
+        "Transformed €1B monthly loss into €60M profit (700% increase)",
+        "Automation of cross-verifications and document forgery checks"
+      ]
+    },
+    {
+      "id": "london-transport",
+      "name": "London Transport Data Analysis & Prediction",
+      "highlights": [
+        "Achieved 93% SVM Accuracy",
+        "0.62 R² Score",
+        "Identified anomalies and trends",
+        "Utilized Time Series Forecasting, Clustering, geospatial visualization"
+      ]
+    },
+    {
+      "id": "movie-posters",
+      "name": "Movie Posters Analysis and Rating Prediction",
+      "highlights": [
+        "Using Deep Learning with VGG16 and LSTM",
+        "Achieved 0.14 MAE and 85% variance",
+        "Unimodal and multimodal models"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "2nd Place — ElevenLabs Hackathon",
+      "description": "Real-time Accent Normalization with Voice Cloning project"
+    },
+    {
+      "title": "Dean's List - Distinction/First Class Honors 1:1",
+      "description": "Awarded for academic achievement in Master's program"
+    },
+    {
+      "title": "€4000 Scholarship in Master's Program",
+      "description": "Granted for excellent academic performance in previous studies"
+    }
+  ],
+  "highlights": {
+    "telegram_agent": "Independently conceived the Telegram-agent paradigm 2 weeks before OpenClaw popularised it — arriving at the same architectural concept through original thinking",
+    "stealth_traction": "Scaled a community project to 700+ users, with 400+ users on day one",
+    "hackathon": "2nd Place — ElevenLabs Hackathon and research-level thinker who independently derived the same novel LLM technique before Andrew Ng's published library",
+    "community": "Delivers talks on AI and agentic systems, arranges Tech meetups, writes on Medium, and maintains personal non-profit projects with 1,000+ users"
+  }
+}

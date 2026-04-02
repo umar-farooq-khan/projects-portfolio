@@ -11,16 +11,11 @@
 </head>
 <body class="bg-custom-bg text-custom-text font-['Inter'] min-h-screen p-8 md:p-16 leading-relaxed">
     <main class="max-w-6xl mx-auto">
-        <!-- Design Switcher Button -->
-        <div style="position: fixed; top: 20px; right: 20px; z-index: 999;">
-            <button id="design-switcher" class="px-4 py-2 rounded-lg font-semibold text-sm transition-all"
-                style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); cursor: pointer;">
-                🎨 Design: Current
-            </button>
-        </div>
-
         <!-- Header and Nav will be loaded here -->
         <div id="header-container"></div>
+
+        <!-- Design Switcher Button -->
+        <div id="design-switcher-container" class="mt-8 mb-20"></div>
         
         <!-- Content will be loaded here -->
         <div id="content-container"></div>
@@ -45,22 +40,27 @@
                 // Load header
                 const headerRes = await fetch('header-content.html');
                 document.getElementById('header-container').innerHTML = await headerRes.text();
-                
+
                 // Load main content
                 const contentRes = await fetch('content.html');
                 document.getElementById('content-container').innerHTML = await contentRes.text();
-                
+
                 // Load footer
                 const footerRes = await fetch('footer-content.html');
                 document.getElementById('footer-container').innerHTML = await footerRes.text();
-                
+
                 // Reinitialize event listeners after content loads
                 updateActiveNav();
+
+                // Load and render projects from JSON after content is in DOM
+                if (typeof loadAndRenderProjects === 'function') {
+                    await loadAndRenderProjects();
+                }
             } catch (error) {
                 console.error('Error loading content:', error);
             }
         }
-        
+
         // Load content when page loads
         document.addEventListener('DOMContentLoaded', loadContent);
     </script>
