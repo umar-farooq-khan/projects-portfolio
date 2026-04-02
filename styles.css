@@ -1,0 +1,136 @@
+        /* Custom styles for better visual effects */
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 60% 40%, #183B6B 0%, #0A1436 70%, #2563EB 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 20, 29, 0.45);
+            border-radius: 1.25rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            transition: box-shadow 0.3s, border 0.3s, background 0.3s;
+        }
+        .glass-card:hover {
+            box-shadow: 0 12px 40px 0 rgba(56, 98, 248, 0.18);
+            border: 1.5px solid rgba(56, 139, 248, 0.25);
+            background: rgba(37, 99, 235, 0.10);
+        }
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+            background: none;
+            border: none;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .link-hover {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #38BDF8, #818CF8);
+            transition: width 0.3s ease;
+        }
+        .link-hover:hover::after {
+            width: 100%;
+        }
+        /* Styling for inline links */
+        a {
+            color: #e017ee;
+            text-decoration: underline;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: #e017ee;
+            text-decoration: none;
+        }
+        
+        /* Popup Modal Styles */
+        .popup-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        
+        .popup-content {
+            position: relative;
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.3s ease;
+        }
+        
+        .popup-close:hover {
+            color: #38BDF8;
+        }
+        
+        .image-gallery {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+            border-color: #38BDF8;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Active navigation link styling */
+        .nav-link.active {
+            color: #38BDF8 !important;
+        }
