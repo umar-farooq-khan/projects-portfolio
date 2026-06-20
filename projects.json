@@ -13,7 +13,7 @@
       "company": "Coso AI",
       "title": "Senior Software Engineer (AI)",
       "location": "Dublin, Ireland 🇮🇪",
-      "duration": "July 2025 – Present (8 Months)",
+      "duration": "Jul 2025 – Jun 2026 (1 year)",
       "highlights": [
         "Engineered a Behavioural Rules Extraction Engine that mines user editing patterns to extract implicit behavioural rules and injects them into agent prompts as learned constraints; a closed-loop RLHF analogue in prompt-space; lifted approval rate from 48.5% baseline to 90.1%; reduced rejected outputs by 5×",
         "Built Verification-Gated Self-Correcting Agents that autonomously critique and iteratively refine their own output against learned constraints until quality thresholds pass; with bounded retries for guaranteed termination. Deployed with a cost-routed model cascade that reserves top-tier models for generation and judging while funnelling lightweight tasks to smaller models",
@@ -30,7 +30,7 @@
       "company": "Peak Antenna AB",
       "title": "AI Software Engineer",
       "location": "Gothenburg, Sweden 🇸🇪",
-      "duration": "Dec 2024 – Aug 2025 (8 Months)",
+      "duration": "Dec 2024 – Jul 2025 (8 months)",
       "highlights": [
         "Developing an AI-powered 3D modeling tool for antenna simulation and customization using Three.js",
         "Automating industry standard Antenna Simulation Tool (CST) using Python and GenAI for report generation",
@@ -120,7 +120,7 @@
       "company": "LesPtitsMonstres.fr",
       "title": "Lead Software Engineer (Android)",
       "location": "Montpellier, France 🇫🇷",
-      "duration": "Aug 2019 – Feb 2021 (1 yr 7 mos)",
+      "duration": "Aug 2019 – Mar 2021 (~2 years)",
       "highlights": [
         "Developed article reading and learning app for dyslexic children using Android SDK, Java, Kotlin, and XML with Firebase backend",
         "Maintained 0% crash rate and 0% ANRs (Application Not Responding) across 3,000+ active users",
