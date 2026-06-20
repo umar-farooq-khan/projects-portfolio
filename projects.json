@@ -23,7 +23,7 @@
         "Established the engineering team's AI-assisted development standards; a living agent rulebook encoding architecture guardrails and coding conventions that every team member's agent loads as system context before every session; extended with custom agent tools as repeatable workflows and a persistent memory layer so agents start each session already knowing non-obvious project constraints",
         "Managed multi-environment deployments on SST with AWS Lambda, S3, and API Gateway"
       ],
-      "technologies": ["GenAI", "LLMs", "Python", "SvelteKit", "AWS", "Lambda", "S3", "API Gateway"]
+      "technologies": ["TypeScript", "GenAI", "LLMs", "Python", "SvelteKit", "AWS", "Lambda", "S3", "API Gateway"]
     },
     {
       "id": "peak-antenna",
@@ -59,6 +59,37 @@
       "technologies": ["GenAI", "LLMs", "Python", "Django", "Node.js", "React", "AWS", "Docker"]
     },
     {
+      "id": "nordicwise",
+      "company": "NordicWise",
+      "title": "AI Engineer (Co-Founder)",
+      "location": "Gothenburg, Sweden 🇸🇪",
+      "duration": "Feb 2023 – Aug 2023 (7 Months)",
+      "highlights": [
+        "Engineered AI-powered CV parsing and recruitment automation using structured LLM outputs — implemented in early 2023, over a year before OpenAI formally introduced Structured Outputs as a feature",
+        "Built Standard CV generation pipeline automating what LinkedIn Easy Apply required manual effort for",
+        "Parsed heterogeneous PDF and DOCX formats with high field-extraction accuracy using custom schema enforcement",
+        "Deployed at scale using Django with high-concurrency support and RESTful APIs"
+      ],
+      "technologies": ["GenAI", "LLMs", "Python", "Django", "PDF/DOCX parsing"]
+    },
+    {
+      "id": "lesptitsmonstres",
+      "company": "LesPtitsMonstres.fr",
+      "title": "Lead Software Engineer (Android)",
+      "location": "Montpellier, France 🇫🇷",
+      "duration": "Aug 2019 – Mar 2021 (~2 years)",
+      "highlights": [
+        "Developed article reading and learning app for dyslexic children using Android SDK, Java, Kotlin, and XML with Firebase backend",
+        "Maintained 0% ANR (Application Not Responding) across 3,000+ active users",
+        "Full product ownership and maintenance over 1.5 years using Agile methodology",
+        "Integrated custom Text-to-Speech with granular controls (speed, language) for auditory learning across app and website",
+        "Curated dyslexia-specific content with PDF downloads and interactive features designed with occupational therapists",
+        "Implemented dyslexic-friendly fonts and screen contrast settings for accessibility",
+        "WordPress custom feature implementation for supporting website"
+      ],
+      "technologies": ["Android SDK", "Java", "Kotlin", "XML", "Firebase", "Agile", "WordPress"]
+    },
+    {
       "id": "fiverr-ai",
       "company": "Fiverr",
       "title": "AI Software Engineer",
@@ -88,20 +119,6 @@
       "technologies": ["Python", "Machine Learning", "Deep Learning", "Angular", "Flask", "Django", "SQL", "NoSQL", "Java", "Kotlin", "Android Development"]
     },
     {
-      "id": "nordicwise",
-      "company": "NordicWise",
-      "title": "AI Engineer (Co-Founder)",
-      "location": "Gothenburg, Sweden 🇸🇪",
-      "duration": "Feb 2023 – Aug 2023 (7 Months)",
-      "highlights": [
-        "Engineered AI-powered CV parsing and recruitment automation using structured LLM outputs — implemented in early 2023, over a year before OpenAI formally introduced Structured Outputs as a feature",
-        "Built Standard CV generation pipeline automating what LinkedIn Easy Apply required manual effort for",
-        "Parsed heterogeneous PDF and DOCX formats with high field-extraction accuracy using custom schema enforcement",
-        "Deployed at scale using Django with high-concurrency support and RESTful APIs"
-      ],
-      "technologies": ["GenAI", "LLMs", "Python", "Django", "PDF/DOCX parsing"]
-    },
-    {
       "id": "ufk-etsy",
       "company": "Etsy",
       "title": "Ecommerce Business Owner",
@@ -114,23 +131,6 @@
         "Built and scaled e-commerce brand from concept to profitable operation"
       ],
       "technologies": ["E-commerce", "Business Operations", "Customer Service", "Inventory Management"]
-    },
-    {
-      "id": "lesptitsmonstres",
-      "company": "LesPtitsMonstres.fr",
-      "title": "Lead Software Engineer (Android)",
-      "location": "Montpellier, France 🇫🇷",
-      "duration": "Aug 2019 – Mar 2021 (~2 years)",
-      "highlights": [
-        "Developed article reading and learning app for dyslexic children using Android SDK, Java, Kotlin, and XML with Firebase backend",
-        "Maintained 0% crash rate and 0% ANRs (Application Not Responding) across 3,000+ active users",
-        "Full product ownership and maintenance over 1.5 years using Agile methodology",
-        "Integrated custom Text-to-Speech with granular controls (speed, language) for auditory learning across app and website",
-        "Curated dyslexia-specific content with PDF downloads and interactive features designed with occupational therapists",
-        "Implemented dyslexic-friendly fonts and screen contrast settings for accessibility",
-        "WordPress custom feature implementation for supporting website"
-      ],
-      "technologies": ["Android SDK", "Java", "Kotlin", "XML", "Firebase", "Agile", "WordPress"]
     },
     {
       "id": "bothofus",
@@ -177,28 +177,32 @@
         "Free-form tone & style rules engine for user-defined rephrasing preferences"
       ],
       "links": {
-        "chrome": "https://chromewebstore.google.com/detail/coherify-improve-your-tex/jfghnihkkbhdllbjighlneenimkakoog"
+        "chrome": "https://chromewebstore.google.com/detail/coherify-improve-your-tex/jfghnihkkbhdllbjighlneenimkakoog",
+        "website": "https://coherifyai.com/about"
       }
     },
     {
       "id": "cv-tailoring-harness",
-      "name": "CV Tailoring Harness: Agentic Document Engineering",
+      "name": "CV Tailoring Coding Harness: Agentic Document & Code Engineering",
       "category": "AGENTIC SYSTEMS",
-      "description": "A git-tracked multi-agent internal tool combining sub-agent decomposition, two-pass knowledge-base retrieval, baseline-anchored rewrites, and closed-loop feedback",
+      "description": "A git-tracked, loop engineered multi-agent internal tool combining sub-agent decomposition, two-pass knowledge-base retrieval, baseline-anchored rewrites, and closed-loop feedback",
       "highlights": [
-        "Custom skills encode repeatable agent workflows as tools",
+        "18 custom skills encode repeatable agent workflows as composable tools for CV tailoring and code generation",
         "Token-minimal content surface cuts per-section token use by 57%",
         "Persistent memory layer and living AGENTS.md rulebook",
-        "Generalizes the agent-guidance engine to any document tailoring"
-      ]
+        "Generalizes the agent-guidance engine to any document or code tailoring task"
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/CV-tailoring-harness"
+      }
     },
     {
       "id": "stealth",
-      "name": "Stealth - Real-Time Geospatial Platform",
+      "name": "Real-Time Geospatial Web App",
       "category": "REAL-TIME MAPPING",
-      "description": "Independently built and scaled a map-based platform with zero-latency rendering under high-concurrency load",
+      "description": "Built with Next.js; independently built and scaled a map-based platform with zero-latency rendering under high-concurrency load",
       "highlights": [
-        "700+ users across 44+ countries",
+        "1,000+ users across 44+ countries",
         "400+ users on day one",
         "Zero-latency rendering under high-concurrency load",
         "Real-time data sync with sub-second consistency at scale",
@@ -215,7 +219,10 @@
         "Designed for global teams where accents reflect diversity, not ability",
         "Preserves speaker's original voice and emotional tone through voice cloning",
         "Built with SvelteKit, Mozilla STT, and ElevenLabs voice features"
-      ]
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7406322148887154689/"
+      }
     },
     {
       "id": "p2p-payment",
@@ -227,7 +234,10 @@
         "Zero-fee, sub-10-second global pipeline on stablecoins & crypto wallets",
         "Multilingual interface removes dependency on traditional banking infrastructure",
         "30 hrs Hackathon project"
-      ]
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/posts/umar-farooq-khan_i-spent-the-whole-weekend-at-an-intensive-activity-7419302919902175232-RpU2"
+      }
     },
     {
       "id": "openclaw-optimizer",
@@ -239,7 +249,10 @@
         "Autonomously reschedule, consolidate, or decline meetings",
         "Connects with Google calendar, goal trackers, and lifestyle platforms",
         "Holistic life optimization system"
-      ]
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7432783630202007555/"
+      }
     },
     {
       "id": "quranic-alignment",
@@ -251,19 +264,25 @@
         "Handles tonal and melodic Quranic recitation across different reciters and maqamat",
         "Achieved without any labeled dataset, crowd-sourced audio, or model fine-tuning",
         "Determinism is intentional; hallucination is architecturally impossible"
-      ]
+      ],
+      "links": {
+        "website": "https://maqaam.app"
+      }
     },
     {
       "id": "bidirectional-rag",
       "name": "Bidirectional Similarity Ranking for Intent-Aware Query Optimization in RAG",
       "category": "RAG/LLM OPTIMIZATION",
-      "description": "Query optimization algorithm generating N intent-aware variants of user's prompt with bidirectional similarity scoring",
+      "description": "An early instance of the query-expansion technique now foundational to multi-agent systems; generates and ranks intent-preserving prompt variants, surfacing the optimal query for retrieval while reducing hallucinations and token waste",
       "highlights": [
         "Published 2023",
-        "Predates and parallels Rewrite-Retrieve-Read, Query2Doc, and Google DeepMind's OPRO",
+        "Generates N intent-aware variants of user's prompt with bidirectional similarity scoring",
         "Only approach combining multi-query generation, bidirectional similarity ranking, and user-in-the-loop selection",
         "Reduces hallucinations and token waste in RAG pipelines"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/RAG_LLM_Query_Response_Optimizer"
+      }
     },
     {
       "id": "multilingual-speech",
@@ -275,7 +294,11 @@
         "Outperforms YouTube's auto-captions by over 22%",
         "Custom homophone disambiguation and accent handling",
         "Independently developed same novel methodology published by Andrew Ng and UC Berkeley researchers"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/Agentic-multilingual-translation",
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7211634096106594309/"
+      }
     }
   ],
   "hall_of_fame": [
@@ -284,7 +307,7 @@
       "name": "Multi Lingual Agentic Speech Translation",
       "repeated": true,
       "category": "AGENTIC/LLM",
-      "description": "Biggest achievement - solved a problem no one touched before",
+      "description": "Biggest achievement; implemented a technique which Andrew Ng validated",
       "highlights": [
         "Deployed in Ireland mosques and collaborating with other mosques",
         "Handles multi-lingual speech (English, Urdu, Arabic)",
@@ -380,13 +403,15 @@
       "name": "Bidirectional Similarity Ranking for RAG",
       "repeated": true,
       "category": "PUBLISHED RESEARCH",
-      "description": "Query optimization algorithm for intent-aware prompt improvement",
+      "description": "An early instance of the query-expansion technique now foundational to multi-agent systems; generates and ranks intent-preserving prompt variants, surfacing the optimal query for retrieval",
       "highlights": [
         "Published 2023",
         "Independently devised multi-query generation with bidirectional similarity",
-        "Predates and parallels Rewrite-Retrieve-Read, Query2Doc, and Google DeepMind's OPRO",
         "Only approach combining multi-query generation, bidirectional similarity ranking, and user-in-the-loop"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/RAG_LLM_Query_Response_Optimizer"
+      }
     },
     {
       "id": "elevenlabs-hackathon",
@@ -400,7 +425,10 @@
         "Designed for global teams where accents reflect diversity",
         "Built with SvelteKit, Mozilla STT, and ElevenLabs",
         "2nd Place in ElevenLabs Hackathon"
-      ]
+      ],
+      "links": {
+        "linkedin": "https://www.linkedin.com/feed/update/urn:li:activity:7406322148887154689/"
+      }
     }
   ],
   "education": [
@@ -450,7 +478,10 @@
         "Using LangChain and Explainable AI for financial reports analysis",
         "Price prediction achieving 90% precision, 70% accuracy",
         "Implemented 30+ ML/DL algorithms"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/LLM-aiding-Stock-Market"
+      }
     },
     {
       "id": "legal-doc-summarization",
@@ -460,7 +491,10 @@
         "Achieved 80–90% absolute ROUGE",
         "~85% cosine & Jaccard similarity vs. expert-authored legal summaries",
         "Captured same tone, precision, and style as seasoned legal experts"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/Legal-Document-Summarization-with-Fine-Tuned-LLM"
+      }
     },
     {
       "id": "crash-report-generation",
@@ -478,7 +512,10 @@
         "Novel ensemble BiGRU-BiLSTM architecture using TensorFlow",
         "Single model across both IoT and IP-based network environments",
         "Collaboration with PhD student for research paper"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/malicious-traffic-using-deep-learning"
+      }
     },
     {
       "id": "visa-automation",
@@ -487,7 +524,10 @@
         "Reduced processing time by 97%",
         "Transformed €1B monthly loss into €60M profit (700% increase)",
         "Automation of cross-verifications and document forgery checks"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/LLM-driven-visa-processing"
+      }
     },
     {
       "id": "london-transport",
@@ -497,7 +537,10 @@
         "0.62 R² Score",
         "Identified anomalies and trends",
         "Utilized Time Series Forecasting, Clustering, geospatial visualization"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/TFL_analysis_prediction"
+      }
     },
     {
       "id": "movie-posters",
@@ -506,7 +549,10 @@
         "Using Deep Learning with VGG16 and LSTM",
         "Achieved 0.14 MAE and 85% variance",
         "Unimodal and multimodal models"
-      ]
+      ],
+      "links": {
+        "github": "https://github.com/umar-farooq-khan/movie_poster_prediction"
+      }
     }
   ],
   "awards": [
