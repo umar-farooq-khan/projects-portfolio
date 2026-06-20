@@ -15,12 +15,12 @@
       "location": "Dublin, Ireland 🇮🇪",
       "duration": "July 2025 – Present (8 Months)",
       "highlights": [
-        "Engineered a Behavioural Rules Extraction Engine that autonomously learns implicit rules from human editing patterns — the same principle formalised in Inverse Constitutional AI (ICLR 2025) and Direct Preference Optimization (NeurIPS 2023)",
-        "Built a production LLM Orchestration Framework with structured output generation, tool-use function calling, agentic execution loops — full ReAct reasoning-action paradigm implementation",
-        "Built Verification-Gated Self-Correcting Agents implementing Reflexion and Self-Refine paradigm in production",
-        "Engineered a Dynamic Context Pruning Engine for real-time context scoring — production implementation of MemGPT and H2O Heavy-Hitter Oracle principles",
-        "Developed Cross-Platform Content Validation Framework with pre-publish safety checks for social media moderation",
-        "Full-stack feature ownership across monorepo (database schema → backend → lambda functions → SvelteKit UI)",
+        "Engineered a Behavioural Rules Extraction Engine that mines user editing patterns to extract implicit behavioural rules and injects them into agent prompts as learned constraints; a closed-loop RLHF analogue in prompt-space; lifted approval rate from 48.5% baseline to 90.1%; reduced rejected outputs by 5×",
+        "Built Verification-Gated Self-Correcting Agents that autonomously critique and iteratively refine their own output against learned constraints until quality thresholds pass; with bounded retries for guaranteed termination. Deployed with a cost-routed model cascade that reserves top-tier models for generation and judging while funnelling lightweight tasks to smaller models",
+        "Built a production LLM Orchestration Framework with a two-tier agentic router; deterministic paths handle unambiguous tasks while an LLM tool-choice layer on Claude Sonnet resolves ambiguous ones by selecting the right tools; streaming structured output",
+        "Engineered a Dynamic Context Pruning Engine that scores and evicts low-relevance tokens in real time as agentic sessions grow, preserving critical context within fixed token budgets",
+        "Built a Workflow Automation Engine on a DAG execution runtime that resolves task graphs with partial-failure propagation; 40+ modular automation tasks across 6 types on serverless AWS with exactly-once execution guarantees, driving 8× growth in monthly automated content workflows",
+        "Established the engineering team's AI-assisted development standards; a living agent rulebook encoding architecture guardrails and coding conventions that every team member's agent loads as system context before every session; extended with custom agent tools as repeatable workflows and a persistent memory layer so agents start each session already knowing non-obvious project constraints",
         "Managed multi-environment deployments on SST with AWS Lambda, S3, and API Gateway"
       ],
       "technologies": ["GenAI", "LLMs", "Python", "SvelteKit", "AWS", "Lambda", "S3", "API Gateway"]
