@@ -181,6 +181,18 @@
       }
     },
     {
+      "id": "cv-tailoring-harness",
+      "name": "CV Tailoring Harness: Agentic Document Engineering",
+      "category": "AGENTIC SYSTEMS",
+      "description": "A git-tracked multi-agent internal tool combining sub-agent decomposition, two-pass knowledge-base retrieval, baseline-anchored rewrites, and closed-loop feedback",
+      "highlights": [
+        "Custom skills encode repeatable agent workflows as tools",
+        "Token-minimal content surface cuts per-section token use by 57%",
+        "Persistent memory layer and living AGENTS.md rulebook",
+        "Generalizes the agent-guidance engine to any document tailoring"
+      ]
+    },
+    {
       "id": "stealth",
       "name": "Stealth - Real-Time Geospatial Platform",
       "category": "REAL-TIME MAPPING",
